@@ -83,23 +83,26 @@ function App() {
   }
 
   return (
+<div className='wrapper'>
+      <Header />
+
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/about' element={<About />} />
+          <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+
+
+        </Routes>
+        <Article />
+      </main>
+
+      <Footer />
+    </div>
     <div className="App">
-            <Header />
-
-<main>
-  <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='/contact' element={<Contact />} />
-    <Route path='/blog' element={<Blog />} />
-    <Route path='/about' element={<About />} />
-    <Route path='*' element={<h1>404 NOT FOUND</h1>} />
-
-
-  </Routes>
-  <Article />
-</main>
-
-<Footer />
+      
       {step !== questions.length ? <Game step={step} question={question} onClickVariant={onClickVariant} />
       : (<Result correct={correct} />)
   }
