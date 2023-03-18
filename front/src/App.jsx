@@ -14,36 +14,90 @@ import './index.scss';
 
 const questions = [
   {
-    title: 'React - это ... ?',
-    variants: ['библиотека', 'фреймворк', 'приложение'],
-    correct: 0,
-  },
-  {
-    title: 'Компонент - это ... ',
-    variants: ['приложение', 'часть приложения или страницы', 'то, что я не знаю что такое'],
+    title: 'What year was Marilyn Monroe born?',
+    variants: ['1936', '1926', '1916'],
     correct: 1,
   },
   {
-    title: 'Что такое JSX?',
+    title: 'What profession did Marilyn Monroe begin her career in?',
+    variants: ['Model', 'Singer', 'Actress'],
+    correct: 0,
+  },
+  {
+    title: 'In which movie did Marilyn Monroe play the role of Lorelei Lee?',
     variants: [
-      'Это простой HTML',
-      'Это функция',
-      'Это тот же HTML, но с возможностью выполнять JS-код',
+      '"Gentlemen Prefer Blondes"',
+      '"Some Like It Hot"',
+      '"The Seven Year Itch"',
+    ],
+    correct: 0,
+  },
+  {
+    title: 'What was Marilyn Monroe real name at birth?',
+    variants: [
+      'Mary Louise Monroe',
+      'Elizabeth Rosemond Taylor',
+      'Norma Jeane Mortenson',
     ],
     correct: 2,
   },
+  {
+    title: 'In which film did Marilyn Monroe play the role of Susan, which was a combination of two different characters?',
+    variants: [
+      '"The Seven Year Itch"',
+      '"Some Like It Hot"',
+      '"Gentlemen Prefer Blondes"',
+    ],
+    correct: 1,
+  },
+  {
+    title: 'In what year was Marilyn Monroe nominated for an Academy Award for Best Actress?',
+    variants: [
+      '1953',
+      '1959',
+      '1962',
+    ],
+    correct: 2,
+  },
+  {
+    title: 'What famous musician was a lover of Marilyn Monroe in a secret affair?',
+    variants: [
+      'Frank Sinatra',
+      'Elvis Presley',
+      'Jimi Hendrix',
+    ],
+    correct: 0,
+  },
+  {
+    title: 'What objects adorned the paintings depicting a naked Marilyn Monroe, created by her friend and photographer Milton Greene?',
+    variants: [
+      'Hats',
+      'Diamonds',
+      'Flowers',
+    ],
+    correct: 1,
+  },
+  {
+    title: 'In which movie does Marilyn Monroe sing "Happy Birthday, Mr. President" on John F. Kennedy 45th birthday?',
+    variants: [
+      '"Some Like It Hot"',
+      '"The Seven Year Itch"',
+      '"Gentlemen Prefer Blondes"',
+    ],
+    correct: 0,
+  },
 ];
 
-function Result({correct}) {
+function Result({ correct }) {
   return (
     <div className="result">
       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
-      <h2>Вы отгадали {correct} ответа из {questions.length}</h2>
-     <a href='/'>
-      <button>Попробовать снова</button>
-     </a>
-     
-     
+      <h2>You guessed {correct} answers of {questions.length}</h2>
+      <a href='/'>
+        <button>Попробовать снова</button>
+      </a>
+
+
     </div>
   );
 }
@@ -78,12 +132,13 @@ function App() {
     setStep(step + 1);
 
     if (index === question.correct) {
-      setCorrect(correct +1);
+      setCorrect(correct + 1);
     }
   }
 
   return (
-<div className='wrapper'>
+
+    <div className="App">
       <Header />
 
       <main>
@@ -100,12 +155,9 @@ function App() {
       </main>
 
       <Footer />
-    </div>
-    <div className="App">
-      
       {step !== questions.length ? <Game step={step} question={question} onClickVariant={onClickVariant} />
-      : (<Result correct={correct} />)
-  }
+        : (<Result correct={correct} />)
+      }
     </div>
   );
 }
