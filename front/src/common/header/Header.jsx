@@ -4,19 +4,19 @@ function Header() {
     return (
         <header>
         <ul>
-          <li>
+          <li className="header__link">
            
             <Link to='/'>Home</Link>
           </li>
-          <li>
+          <li className="header__link">
            
             <Link to='/contact'>Contact</Link>
           </li>
-          <li>
+          <li className="header__link">
            
             <Link to='/blog'>Blog</Link>
           </li>
-          <li>
+          <li className="header__link">
            
             <Link to='/about'>About</Link>
           </li>

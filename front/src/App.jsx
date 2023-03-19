@@ -8,7 +8,6 @@ import Home from './pages/home/Home'
 import Contact from './pages/contact/Contact'
 import Blog from './pages/blog/Blog'
 import About from './pages/about/About';
-import Article from './common/article/Article';
 
 import './index.scss';
 
@@ -94,7 +93,8 @@ function Result({ correct }) {
       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
       <h2>You guessed {correct} answers of {questions.length}</h2>
       <a href='/'>
-        <button>Попробовать снова</button>
+        <button>
+          Try again</button>
       </a>
 
 
@@ -148,16 +148,17 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/about' element={<About />} />
           <Route path='*' element={<h1>404 NOT FOUND</h1>} />
-
-
         </Routes>
-        <Article />
       </main>
 
+
+      <div className='game'>
+        <h2>Let's play a quiz</h2>
+        {step !== questions.length ? <Game step={step} question={question} onClickVariant={onClickVariant} />
+          : (<Result correct={correct} />)
+        }
+      </div>
       <Footer />
-      {step !== questions.length ? <Game step={step} question={question} onClickVariant={onClickVariant} />
-        : (<Result correct={correct} />)
-      }
     </div>
   );
 }

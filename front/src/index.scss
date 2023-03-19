@@ -12,103 +12,361 @@
 //   height: 100vh;
 // }
 
-// main {
-//   width: 1500px;
-// }
+main {
+  width: 1500px;
+  overflow: hidden;
+}
 
-// .App {
-//   width: 500px;
-//   border-radius: 30px;
-//   padding: 40px;
-//   background-color: #fff;
-//   position: relative;
+.App {
+  border-radius: 30px;
+  padding: 40px;
+  background-color: #F8D1E3;
+  position: relative;
 
-//   .result {
-//     text-align: center;
+  .result {
+    text-align: center;
 
-//     button {
-//       font-weight: bold;
-//       font-family: 'Nunito', sans-serif;
-//       border-radius: 30px;
-//       border: 0;
-//       padding: 15px 30px;
-//       font-size: 20px;
-//       background-color: darken(#ff006e, 3%);
-//       color: #fff;
-//       margin-top: 20px;
-//       cursor: pointer;
-//     }
+    button {
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 30px;
+      border: 0;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: darken(#ff006e, 3%);
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+    }
 
-//     h2 {
-//       margin-bottom: 0;
-//     }
+    h2 {
+      margin-bottom: 0;
+    }
 
-//     img {
-//       width: 150px;
-//     }
-//   }
+    img {
+      width: 150px;
+    }
+  }
 
-//   .progress {
-//     height: 10px;
-//     border-radius: 30px;
-//     background-color: rgb(232, 232, 232);
-//     margin-bottom: 25px;
+  .progress {
+    height: 10px;
+    border-radius: 30px;
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 25px;
 
-//     &__inner {
-//       height: 100%;
-//       border-radius: 30px;
-//       width: 80%;
-//       background: rgb(18, 231, 48);
-//       transition: all 0.3s ease-in-out;
-//       background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
-//     }
-//   }
+    &__inner {
+      height: 100%;
+      border-radius: 30px;
+      width: 80%;
+      background: rgb(18, 231, 48);
+      transition: all 0.3s ease-in-out;
+      background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    }
+  }
 
-//   &:before,
-//   &:after {
-//     content: '';
-//     display: block;
-//     height: 50px;
-//     border-bottom-left-radius: 30px;
-//     border-bottom-right-radius: 30px;
-//     position: absolute;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-//   &:before {
-//     width: 95%;
-//     bottom: -10px;
-//     background-color: rgba(255, 255, 255, 0.8);
-//     z-index: 0;
-//   }
+  // &:before {
+  //   width: 95%;
+  //   bottom: -10px;
+  //   background-color: rgba(255, 255, 255, 0.8);
+  //   z-index: 0;
+  // }
 
-//   &:after {
-//     width: 90%;
-//     bottom: -20px;
-//     background-color: rgba(255, 255, 255, 0.3);
-//     z-index: 1;
-//   }
+  // &:after {
+  //   width: 90%;
+  //   bottom: -20px;
+  //   background-color: rgba(255, 255, 255, 0.3);
+  //   z-index: 1;
+  // }
 
-//   h1 {
-//     margin: 0;
-//   }
+  // h1 {
+  //   margin: 0;
+  // }
 
-//   ul {
-//     list-style: none;
-//     padding: 0;
+  ul {
+    list-style: none;
+    padding: 0;
 
-//     li {
-//       padding: 15px;
-//       border: 2px solid rgba(0, 0, 0, 0.1);
-//       border-radius: 15px;
-//       margin-bottom: 10px;
-//       cursor: pointer;
-//       transition: all 0.1s ease-in-out;
+    li {
+      padding: 15px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+      height: auto;
+      text-align: center;
+      &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
 
-//       &:hover {
-//         border: 2px solid rgba(0, 0, 0, 0.3);
-//       }
-//     }
-//   }
-// }
+
+
+
+/* Установка общего фонового цвета и шрифта */
+body {
+  background-color: #F8D1E3;
+  font-family: 'Bombshell Pro', cursive;
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Стили для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #cc1c35;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+p {
+  text-align: justify;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+/* Стили для ссылок */
+a {
+  color: #cc1c35;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #b5001b;
+  text-decoration: underline;
+}
+
+/* Стили для кнопок */
+.btn {
+  background-color: #cc1c35;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #b5001b;
+}
+
+/* Стили для формы */
+.form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form button[type="submit"] {
+  width: 100%;
+  background-color: #cc1c35;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #b5001b;
+}
+
+/* Стили для изображений */
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.img-container .img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+
+/* Question and answer styles */
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 64px;
+}
+
+li {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #d085b0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+
+
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 32px;
+}
+
+.result h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+button {
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f4d160;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+
+header {
+  background-color: #F8D1E3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 30px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+.header__link a {
+  text-decoration: none;
+  color: #362415;
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__link a:hover {
+  color: #E9B9D8;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 30px;
+  background-color: rgb(232, 232, 232);
+  margin-bottom: 25px;
+}
+
+.game {
+  width: 500px;
+  margin: 0 auto;
+  border: 5px solid pink;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: rgba(191, 156, 224, 0.333);
+}

@@ -2,8 +2,8 @@ function Home() {
     return (
         <>
             <section>
-                <h2>Marilyn Monroe: beauty, talent, and troubles that shook Hollywood</h2>
-                Main
+                <h1>Marilyn Monroe: beauty, talent, and troubles that shook Hollywood</h1>
+                <img src="https://ca-times.brightspotcdn.com/dims4/default/cbfc74f/2147483647/strip/true/crop/3000x1871+0+0/resize/1200x748!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa9%2F2c%2F97f345c32bbb0429783414e753ca%2Fa590172df48741379a91963e149d95d9" alt="" />
             </section>
             <section>
                 <h2>Life journey of Marilyn Monroe: from a difficult childhood to a star career</h2>
