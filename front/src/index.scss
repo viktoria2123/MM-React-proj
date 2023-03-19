@@ -375,3 +375,20 @@ li:last-child {
 .wrapper {
   overflow: hidden;
 }
+
+
+.card {
+  width: 400px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: all 0.3s ease;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
