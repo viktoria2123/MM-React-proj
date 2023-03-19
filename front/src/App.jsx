@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Header from './common/header/Header'
-import Footer from './common/footer/Footer';
+// import Footer from './common/footer/Footer';
 
 import Home from './pages/home/Home'
 import Contact from './pages/contact/Contact'
@@ -140,16 +140,18 @@ function App() {
 
     <div className="App">
       <Header />
+      <div className='wrapper'>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+          </Routes>
+        </main>
+      </div>
 
-      <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<h1>404 NOT FOUND</h1>} />
-        </Routes>
-      </main>
 
 
       <div className='game'>
@@ -158,7 +160,7 @@ function App() {
           : (<Result correct={correct} />)
         }
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
