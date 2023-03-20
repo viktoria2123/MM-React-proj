@@ -8,6 +8,7 @@ import Home from './pages/home/Home'
 import Contact from './pages/contact/Contact'
 import Blog from './pages/blog/Blog'
 import About from './pages/about/About';
+import Slider from './slider/Slider';
 
 import './index.scss';
 
